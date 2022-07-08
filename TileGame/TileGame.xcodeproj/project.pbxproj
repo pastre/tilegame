@@ -1,0 +1,997 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7152B8928789B9100ECB26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152B8828789B9100ECB26D /* AppDelegate.swift */; };
+		D7152B8B28789B9100ECB26D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152B8A28789B9100ECB26D /* GameViewController.swift */; };
+		D7152B8E28789B9100ECB26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7152B8C28789B9100ECB26D /* Main.storyboard */; };
+		D7152B9128789B9100ECB26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7152B8F28789B9100ECB26D /* LaunchScreen.storyboard */; };
+		D7152B9528789B9100ECB26D /* TileGame.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D7152B9428789B9100ECB26D /* TileGame.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D7152B9B28789B9100ECB26D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7152B9928789B9100ECB26D /* Interface.storyboard */; };
+		D7152BA128789B9100ECB26D /* TileGame Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7152BA028789B9100ECB26D /* TileGame Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D7152BA628789B9100ECB26D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BA528789B9100ECB26D /* InterfaceController.swift */; };
+		D7152BA828789B9100ECB26D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BA728789B9100ECB26D /* ExtensionDelegate.swift */; };
+		D7152BB128789B9100ECB26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BB028789B9100ECB26D /* AppDelegate.swift */; };
+		D7152BB328789B9100ECB26D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BB228789B9100ECB26D /* GameViewController.swift */; };
+		D7152BB628789B9100ECB26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7152BB428789B9100ECB26D /* Main.storyboard */; };
+		D7152BB928789B9100ECB26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7152BB728789B9100ECB26D /* LaunchScreen.storyboard */; };
+		D7152BC128789B9100ECB26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BC028789B9100ECB26D /* AppDelegate.swift */; };
+		D7152BC328789B9100ECB26D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BC228789B9100ECB26D /* GameViewController.swift */; };
+		D7152BC628789B9100ECB26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7152BC428789B9100ECB26D /* Main.storyboard */; };
+		D7152BCF28789B9100ECB26D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152B7F28789B9000ECB26D /* GameScene.swift */; };
+		D7152BD028789B9100ECB26D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152B7F28789B9000ECB26D /* GameScene.swift */; };
+		D7152BD128789B9100ECB26D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152B7F28789B9000ECB26D /* GameScene.swift */; };
+		D7152BD228789B9100ECB26D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152B7F28789B9000ECB26D /* GameScene.swift */; };
+		D7152BD328789B9100ECB26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7152B8028789B9100ECB26D /* Assets.xcassets */; };
+		D7152BD428789B9100ECB26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7152B8028789B9100ECB26D /* Assets.xcassets */; };
+		D7152BD528789B9100ECB26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7152B8028789B9100ECB26D /* Assets.xcassets */; };
+		D7152BD628789B9100ECB26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7152B8028789B9100ECB26D /* Assets.xcassets */; };
+		D7152BEC28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BEB28789DD000ECB26D /* GameScene+EventHandling.swift */; };
+		D7152BED28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BEB28789DD000ECB26D /* GameScene+EventHandling.swift */; };
+		D7152BEE28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BEB28789DD000ECB26D /* GameScene+EventHandling.swift */; };
+		D7152BEF28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BEB28789DD000ECB26D /* GameScene+EventHandling.swift */; };
+		D7152BF128789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */; };
+		D7152BF228789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */; };
+		D7152BF328789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */; };
+		D7152BF428789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7152B9628789B9100ECB26D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7152B7828789B9000ECB26D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7152B9328789B9100ECB26D;
+			remoteInfo = "TileGame watchOS App";
+		};
+		D7152BA228789B9100ECB26D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7152B7828789B9000ECB26D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7152B9F28789B9100ECB26D;
+			remoteInfo = "TileGame watchOS App Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D7152BDC28789B9100ECB26D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D7152BA128789B9100ECB26D /* TileGame Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152BE028789B9100ECB26D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D7152B9528789B9100ECB26D /* TileGame.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D7152B7F28789B9000ECB26D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D7152B8028789B9100ECB26D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7152B8528789B9100ECB26D /* TileGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TileGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7152B8828789B9100ECB26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7152B8A28789B9100ECB26D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D7152B8D28789B9100ECB26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7152B9028789B9100ECB26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7152B9428789B9100ECB26D /* TileGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TileGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7152B9A28789B9100ECB26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D7152BA028789B9100ECB26D /* TileGame Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TileGame Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7152BA528789B9100ECB26D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D7152BA728789B9100ECB26D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D7152BA928789B9100ECB26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7152BAE28789B9100ECB26D /* TileGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TileGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7152BB028789B9100ECB26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7152BB228789B9100ECB26D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D7152BB528789B9100ECB26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7152BB828789B9100ECB26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7152BBE28789B9100ECB26D /* TileGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TileGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7152BC028789B9100ECB26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7152BC228789B9100ECB26D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D7152BC528789B9100ECB26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7152BC728789B9100ECB26D /* TileGame_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TileGame_macOS.entitlements; sourceTree = "<group>"; };
+		D7152BEB28789DD000ECB26D /* GameScene+EventHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+EventHandling.swift"; sourceTree = "<group>"; };
+		D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+Lifecycle.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7152B8228789B9100ECB26D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152B9D28789B9100ECB26D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152BAB28789B9100ECB26D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152BBB28789B9100ECB26D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7152B7728789B9000ECB26D = {
+			isa = PBXGroup;
+			children = (
+				D7152B7C28789B9000ECB26D /* TileGame Shared */,
+				D7152B8728789B9100ECB26D /* TileGame iOS */,
+				D7152B9828789B9100ECB26D /* TileGame watchOS App */,
+				D7152BA428789B9100ECB26D /* TileGame watchOS App Extension */,
+				D7152BAF28789B9100ECB26D /* TileGame tvOS */,
+				D7152BBF28789B9100ECB26D /* TileGame macOS */,
+				D7152B8628789B9100ECB26D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7152B7C28789B9000ECB26D /* TileGame Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D7152BEA28789DAA00ECB26D /* GameScene */,
+				D7152B8028789B9100ECB26D /* Assets.xcassets */,
+			);
+			path = "TileGame Shared";
+			sourceTree = "<group>";
+		};
+		D7152B8628789B9100ECB26D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7152B8528789B9100ECB26D /* TileGame.app */,
+				D7152B9428789B9100ECB26D /* TileGame.app */,
+				D7152BA028789B9100ECB26D /* TileGame Extension.appex */,
+				D7152BAE28789B9100ECB26D /* TileGame.app */,
+				D7152BBE28789B9100ECB26D /* TileGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7152B8728789B9100ECB26D /* TileGame iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7152B8828789B9100ECB26D /* AppDelegate.swift */,
+				D7152B8A28789B9100ECB26D /* GameViewController.swift */,
+				D7152B8C28789B9100ECB26D /* Main.storyboard */,
+				D7152B8F28789B9100ECB26D /* LaunchScreen.storyboard */,
+			);
+			path = "TileGame iOS";
+			sourceTree = "<group>";
+		};
+		D7152B9828789B9100ECB26D /* TileGame watchOS App */ = {
+			isa = PBXGroup;
+			children = (
+				D7152B9928789B9100ECB26D /* Interface.storyboard */,
+			);
+			path = "TileGame watchOS App";
+			sourceTree = "<group>";
+		};
+		D7152BA428789B9100ECB26D /* TileGame watchOS App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D7152BA528789B9100ECB26D /* InterfaceController.swift */,
+				D7152BA728789B9100ECB26D /* ExtensionDelegate.swift */,
+				D7152BA928789B9100ECB26D /* Info.plist */,
+			);
+			path = "TileGame watchOS App Extension";
+			sourceTree = "<group>";
+		};
+		D7152BAF28789B9100ECB26D /* TileGame tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7152BB028789B9100ECB26D /* AppDelegate.swift */,
+				D7152BB228789B9100ECB26D /* GameViewController.swift */,
+				D7152BB428789B9100ECB26D /* Main.storyboard */,
+				D7152BB728789B9100ECB26D /* LaunchScreen.storyboard */,
+			);
+			path = "TileGame tvOS";
+			sourceTree = "<group>";
+		};
+		D7152BBF28789B9100ECB26D /* TileGame macOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7152BC028789B9100ECB26D /* AppDelegate.swift */,
+				D7152BC228789B9100ECB26D /* GameViewController.swift */,
+				D7152BC428789B9100ECB26D /* Main.storyboard */,
+				D7152BC728789B9100ECB26D /* TileGame_macOS.entitlements */,
+			);
+			path = "TileGame macOS";
+			sourceTree = "<group>";
+		};
+		D7152BEA28789DAA00ECB26D /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				D7152B7F28789B9000ECB26D /* GameScene.swift */,
+				D7152BEB28789DD000ECB26D /* GameScene+EventHandling.swift */,
+				D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */,
+			);
+			path = GameScene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7152B8428789B9100ECB26D /* TileGame iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7152BE128789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame iOS" */;
+			buildPhases = (
+				D7152B8128789B9100ECB26D /* Sources */,
+				D7152B8228789B9100ECB26D /* Frameworks */,
+				D7152B8328789B9100ECB26D /* Resources */,
+				D7152BE028789B9100ECB26D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7152B9728789B9100ECB26D /* PBXTargetDependency */,
+			);
+			name = "TileGame iOS";
+			productName = "TileGame iOS";
+			productReference = D7152B8528789B9100ECB26D /* TileGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7152B9328789B9100ECB26D /* TileGame watchOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7152BDD28789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame watchOS App" */;
+			buildPhases = (
+				D7152B9228789B9100ECB26D /* Resources */,
+				D7152BDC28789B9100ECB26D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7152BA328789B9100ECB26D /* PBXTargetDependency */,
+			);
+			name = "TileGame watchOS App";
+			productName = "TileGame watchOS App";
+			productReference = D7152B9428789B9100ECB26D /* TileGame.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D7152B9F28789B9100ECB26D /* TileGame watchOS App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7152BD928789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame watchOS App Extension" */;
+			buildPhases = (
+				D7152B9C28789B9100ECB26D /* Sources */,
+				D7152B9D28789B9100ECB26D /* Frameworks */,
+				D7152B9E28789B9100ECB26D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TileGame watchOS App Extension";
+			productName = "TileGame watchOS App Extension";
+			productReference = D7152BA028789B9100ECB26D /* TileGame Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		D7152BAD28789B9100ECB26D /* TileGame tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7152BE428789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame tvOS" */;
+			buildPhases = (
+				D7152BAA28789B9100ECB26D /* Sources */,
+				D7152BAB28789B9100ECB26D /* Frameworks */,
+				D7152BAC28789B9100ECB26D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TileGame tvOS";
+			productName = "TileGame tvOS";
+			productReference = D7152BAE28789B9100ECB26D /* TileGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7152BBD28789B9100ECB26D /* TileGame macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7152BE728789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame macOS" */;
+			buildPhases = (
+				D7152BBA28789B9100ECB26D /* Sources */,
+				D7152BBB28789B9100ECB26D /* Frameworks */,
+				D7152BBC28789B9100ECB26D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TileGame macOS";
+			productName = "TileGame macOS";
+			productReference = D7152BBE28789B9100ECB26D /* TileGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7152B7828789B9000ECB26D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					D7152B8428789B9100ECB26D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					D7152B9328789B9100ECB26D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					D7152B9F28789B9100ECB26D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					D7152BAD28789B9100ECB26D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					D7152BBD28789B9100ECB26D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D7152B7B28789B9000ECB26D /* Build configuration list for PBXProject "TileGame" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7152B7728789B9000ECB26D;
+			productRefGroup = D7152B8628789B9100ECB26D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7152B8428789B9100ECB26D /* TileGame iOS */,
+				D7152B9328789B9100ECB26D /* TileGame watchOS App */,
+				D7152B9F28789B9100ECB26D /* TileGame watchOS App Extension */,
+				D7152BAD28789B9100ECB26D /* TileGame tvOS */,
+				D7152BBD28789B9100ECB26D /* TileGame macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7152B8328789B9100ECB26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152B8E28789B9100ECB26D /* Main.storyboard in Resources */,
+				D7152B9128789B9100ECB26D /* LaunchScreen.storyboard in Resources */,
+				D7152BD328789B9100ECB26D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152B9228789B9100ECB26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152BD428789B9100ECB26D /* Assets.xcassets in Resources */,
+				D7152B9B28789B9100ECB26D /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152B9E28789B9100ECB26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152BAC28789B9100ECB26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152BB628789B9100ECB26D /* Main.storyboard in Resources */,
+				D7152BB928789B9100ECB26D /* LaunchScreen.storyboard in Resources */,
+				D7152BD528789B9100ECB26D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152BBC28789B9100ECB26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152BC628789B9100ECB26D /* Main.storyboard in Resources */,
+				D7152BD628789B9100ECB26D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7152B8128789B9100ECB26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152BCF28789B9100ECB26D /* GameScene.swift in Sources */,
+				D7152B8B28789B9100ECB26D /* GameViewController.swift in Sources */,
+				D7152BEC28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */,
+				D7152BF128789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */,
+				D7152B8928789B9100ECB26D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152B9C28789B9100ECB26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152BD028789B9100ECB26D /* GameScene.swift in Sources */,
+				D7152BA828789B9100ECB26D /* ExtensionDelegate.swift in Sources */,
+				D7152BED28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */,
+				D7152BF228789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */,
+				D7152BA628789B9100ECB26D /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152BAA28789B9100ECB26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152BD128789B9100ECB26D /* GameScene.swift in Sources */,
+				D7152BB328789B9100ECB26D /* GameViewController.swift in Sources */,
+				D7152BEE28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */,
+				D7152BF328789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */,
+				D7152BB128789B9100ECB26D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7152BBA28789B9100ECB26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7152BD228789B9100ECB26D /* GameScene.swift in Sources */,
+				D7152BC328789B9100ECB26D /* GameViewController.swift in Sources */,
+				D7152BEF28789DD000ECB26D /* GameScene+EventHandling.swift in Sources */,
+				D7152BF428789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */,
+				D7152BC128789B9100ECB26D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7152B9728789B9100ECB26D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7152B9328789B9100ECB26D /* TileGame watchOS App */;
+			targetProxy = D7152B9628789B9100ECB26D /* PBXContainerItemProxy */;
+		};
+		D7152BA328789B9100ECB26D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7152B9F28789B9100ECB26D /* TileGame watchOS App Extension */;
+			targetProxy = D7152BA228789B9100ECB26D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7152B8C28789B9100ECB26D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7152B8D28789B9100ECB26D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7152B8F28789B9100ECB26D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7152B9028789B9100ECB26D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D7152B9928789B9100ECB26D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7152B9A28789B9100ECB26D /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		D7152BB428789B9100ECB26D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7152BB528789B9100ECB26D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7152BB728789B9100ECB26D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7152BB828789B9100ECB26D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D7152BC428789B9100ECB26D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7152BC528789B9100ECB26D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7152BD728789B9100ECB26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7152BD828789B9100ECB26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D7152BDA28789B9100ECB26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TileGame watchOS App Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TileGame watchOS App Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "TileGame Extension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		D7152BDB28789B9100ECB26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TileGame watchOS App Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "TileGame watchOS App Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "TileGame Extension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		D7152BDE28789B9100ECB26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = TileGame_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = TileGame;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.pastre.TileGame;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame.watchkitapp;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		D7152BDF28789B9100ECB26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = TileGame_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = TileGame;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = dev.pastre.TileGame;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame.watchkitapp;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		D7152BE228789B9100ECB26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7152BE328789B9100ECB26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7152BE528789B9100ECB26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		D7152BE628789B9100ECB26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7152BE828789B9100ECB26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TileGame macOS/TileGame_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D7152BE928789B9100ECB26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TileGame macOS/TileGame_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QM43B7QRF9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pastre.TileGame;
+				PRODUCT_NAME = TileGame;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7152B7B28789B9000ECB26D /* Build configuration list for PBXProject "TileGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7152BD728789B9100ECB26D /* Debug */,
+				D7152BD828789B9100ECB26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7152BD928789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame watchOS App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7152BDA28789B9100ECB26D /* Debug */,
+				D7152BDB28789B9100ECB26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7152BDD28789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame watchOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7152BDE28789B9100ECB26D /* Debug */,
+				D7152BDF28789B9100ECB26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7152BE128789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7152BE228789B9100ECB26D /* Debug */,
+				D7152BE328789B9100ECB26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7152BE428789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7152BE528789B9100ECB26D /* Debug */,
+				D7152BE628789B9100ECB26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7152BE728789B9100ECB26D /* Build configuration list for PBXNativeTarget "TileGame macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7152BE828789B9100ECB26D /* Debug */,
+				D7152BE928789B9100ECB26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7152B7828789B9000ECB26D /* Project object */;
+}
