@@ -39,6 +39,7 @@
 		D7152BF228789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */; };
 		D7152BF328789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */; };
 		D7152BF428789E0800ECB26D /* GameScene+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */; };
+		D7C999BB2878A7630050E177 /* TGCore in Frameworks */ = {isa = PBXBuildFile; productRef = D7C999BA2878A7630050E177 /* TGCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		D7152BC728789B9100ECB26D /* TileGame_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TileGame_macOS.entitlements; sourceTree = "<group>"; };
 		D7152BEB28789DD000ECB26D /* GameScene+EventHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+EventHandling.swift"; sourceTree = "<group>"; };
 		D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+Lifecycle.swift"; sourceTree = "<group>"; };
+		D7C999B82878A72D0050E177 /* TGCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TGCore; path = ../TGCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C999BB2878A7630050E177 /* TGCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +149,7 @@
 		D7152B7728789B9000ECB26D = {
 			isa = PBXGroup;
 			children = (
+				D7C999B72878A72D0050E177 /* Packages */,
 				D7152B7C28789B9000ECB26D /* TileGame Shared */,
 				D7152B8728789B9100ECB26D /* TileGame iOS */,
 				D7152B9828789B9100ECB26D /* TileGame watchOS App */,
@@ -153,6 +157,7 @@
 				D7152BAF28789B9100ECB26D /* TileGame tvOS */,
 				D7152BBF28789B9100ECB26D /* TileGame macOS */,
 				D7152B8628789B9100ECB26D /* Products */,
+				D7C999B92878A7630050E177 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +241,21 @@
 				D7152BF028789E0800ECB26D /* GameScene+Lifecycle.swift */,
 			);
 			path = GameScene;
+			sourceTree = "<group>";
+		};
+		D7C999B72878A72D0050E177 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				D7C999B82878A72D0050E177 /* TGCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		D7C999B92878A7630050E177 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +344,9 @@
 			dependencies = (
 			);
 			name = "TileGame macOS";
+			packageProductDependencies = (
+				D7C999BA2878A7630050E177 /* TGCore */,
+			);
 			productName = "TileGame macOS";
 			productReference = D7152BBE28789B9100ECB26D /* TileGame.app */;
 			productType = "com.apple.product-type.application";
@@ -992,6 +1015,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7C999BA2878A7630050E177 /* TGCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TGCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7152B7828789B9000ECB26D /* Project object */;
 }

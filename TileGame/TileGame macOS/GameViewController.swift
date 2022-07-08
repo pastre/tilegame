@@ -9,9 +9,12 @@ import Cocoa
 import SpriteKit
 import GameplayKit
 
+import TGCore
+
 class GameViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let skView = self.view as! SKView
         assert(skView.frame.size != .zero)
         let scene = GameScene.make(withSize: skView.frame.size)
