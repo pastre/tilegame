@@ -1,0 +1,14 @@
+name: TileGame
+options:
+  bundleIdPrefix: dev.pastre
+packages:
+  TileGameLib:
+    path: TileGameLib/
+targets:
+  TileGame - iOS:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources: [iOS]
+    dependencies:
+      - package: TileGameLib
