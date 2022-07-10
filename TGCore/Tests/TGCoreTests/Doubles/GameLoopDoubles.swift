@@ -17,11 +17,13 @@ final class GameLoopSpy: GameLoopDelegate {
 }
 
 extension GameLoop {
-    convenience init(
-        levelFactory: @escaping LevelFactory
-    ) {
-        self.init(levelFactory: levelFactory,
-                  moveFinder: { _ in .zero }
+    convenience init(levelFactory: @escaping (Int) -> Level) {
+        self.init(levelFactory: .init(make: levelFactory),
+                  exitFinder: .dummy
         )
     }
+}
+
+extension ExitFinder {
+    static let dummy: Self = .init(find: { _ in .zero })
 }

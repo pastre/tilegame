@@ -37,7 +37,15 @@ extension Board {
     subscript(safe index: Int) -> [Tile]? { rows[safe: index] }
     
     subscript(_ tilePostion: TilePosition) -> Tile {
-        get { rows[tilePostion.x][tilePostion.y] }
-        set { rows[tilePostion.x][tilePostion.y] = newValue }
+        get { rows[tilePostion.y][tilePostion.x] }
+        set { rows[tilePostion.y][tilePostion.x] = newValue }
+    }
+}
+
+extension Board {
+    func contains(position: TilePosition) -> Bool {
+        guard let row = rows[safe: position.y]
+        else { return false }
+        return row.indices.contains(position.x)
     }
 }

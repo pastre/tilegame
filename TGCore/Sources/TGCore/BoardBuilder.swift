@@ -60,6 +60,18 @@ final class BoardBuilder {
     }
 }
 
+extension Board {
+    init(rows: [[Tile]]) {
+        self.init(
+            rows: rows,
+            size: .init(
+                width: rows.width,
+                height: rows.height
+            ))
+    }
+}
+
+
 private extension Array where Element == [Tile] {
     var width: Int {
         first?.count ?? 0

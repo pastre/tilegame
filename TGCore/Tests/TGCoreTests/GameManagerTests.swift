@@ -85,8 +85,8 @@ final class GameManagerTests: XCTestCase {
         let spy = GameLoopSpy()
         let stub = LevelStub()
         let game = GameLoop(
-            levelFactory: { _ in stub },
-            moveFinder: { _ in expectedPosition }
+            levelFactory: .stub(stub),
+            exitFinder: .stub(expectedPosition)
         )
         
         stub.isGameOverToUse = false
@@ -100,5 +100,17 @@ final class GameManagerTests: XCTestCase {
         
         XCTAssertEqual(1, spy.playerDidMoveCallCount)
         XCTAssertEqual(expectedPosition, spy.playerDidMovePositionPassed)
+    }
+}
+
+extension ExitFinder {
+    static func stub(_ expectedValue: TilePosition) -> Self {
+        .init(find: { _ in expectedValue })
+    }
+}
+
+extension LevelMaker {
+    static func stub(_ expectedValue: Level) -> Self {
+        .init(make: { _ in expectedValue })
     }
 }
