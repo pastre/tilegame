@@ -2,6 +2,11 @@ public struct Board: Equatable {
     public private(set) var rows: [[Tile]]
     public let size: BoardSize
     
+    public init(rows: [[Tile]], size: BoardSize) {
+        self.rows = rows
+        self.size = size
+    }
+    
     var area: Int { size.area }
     var height: Int { size.height }
     var width: Int { size.width }

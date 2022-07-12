@@ -94,4 +94,13 @@ final class LevelManagerTests: XCTestCase {
         
         XCTAssertNil(game.playerPosition)
     }
+    
+    func test_wont_remove_tile_that_player_is_on() {
+     
+        let game = largeGame
+        game.movePlayer(toPosition: .zero.offset(x: 1, y: 1))
+        
+        game.removeTile(atPosition: .init(x: 1, y: 1))
+        XCTAssertEqual(game.board[1][1], .floor)
+    }
 }

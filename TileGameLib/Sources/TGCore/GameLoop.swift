@@ -6,7 +6,7 @@ public enum GameState {
 
 public protocol GameLoopDelegate: AnyObject {
     func gameStateDidChange(toNewState gameState: GameState)
-    func playerDidMove(toPosition position: TilePosition)
+    func playerDidMove(_ level: Level, toPosition position: TilePosition)
 }
 
 public final class GameLoop {
@@ -21,15 +21,15 @@ public final class GameLoop {
         }
     }
     
-    weak var delegate: GameLoopDelegate? {
+    public weak var delegate: GameLoopDelegate? {
         didSet {
             delegate?.gameStateDidChange(toNewState: currentGameState)
         }
     }
     
-    public convenience init() {
+    public convenience init(levelFactory: LevelMaker? = nil) {
         self.init(
-            levelFactory: .default,
+            levelFactory: levelFactory ?? .default,
             exitFinder: .usingDjikstra
         )
     }
@@ -40,17 +40,27 @@ public final class GameLoop {
     ) {
         self.levelFactory = levelFactory
         self.exitFinder = exitFinder
-        
-        start()
     }
     
-    func start() {
+    public func start() {
         levelsPassed = 0
-        level = levelFactory.make(levelsPassed)
+        createNewLevel()
         currentGameState = .running
     }
     
-    func removeTile(atPosition position: TilePosition) {
+    public func createNewLevel() {
+        level = levelFactory.make(levelsPassed)
+        if let playerStartPosition = level?.board.rows.enumerated().flatMap({ (j, row) in
+            row.enumerated().compactMap { (i, tile) -> TilePosition? in
+                if tile != .floor { return nil }
+                return TilePosition(x: i, y: j)
+            }
+        }).randomElement() {
+            level?.movePlayer(toPosition: playerStartPosition)
+        }
+    }
+    
+    public func removeTile(atPosition position: TilePosition) {
         guard let level = level else {
             return
         }
@@ -67,6 +77,6 @@ public final class GameLoop {
         guard let nextMove = exitFinder.find(level)
         else { return }
         level.movePlayer(toPosition: nextMove)
-        delegate?.playerDidMove(toPosition: nextMove)
+        delegate?.playerDidMove(level, toPosition: nextMove)
     }
 }

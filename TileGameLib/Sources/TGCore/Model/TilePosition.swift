@@ -1,5 +1,10 @@
+import CoreGraphics
 public struct TilePosition: Equatable, Hashable {
     let x, y: Int
+    public init(x: Int, y: Int) {
+        self.x = x
+        self.y = y
+    }
 }
 
 extension TilePosition {
@@ -17,15 +22,21 @@ extension TilePosition {
 
 extension TilePosition {
     var surroundings: [TilePosition] {
-        [
-            offset(x: -1), // W
-            offset(x: 1),  // E
-            offset(y: -1), // N
-            offset(y: 1), // S
-            offset(x: -1, y: -1), // NW
-            offset(x: 1, y: -1), // NE
-            offset(x: -1, y: 1), // SW
-            offset(x: 1, y: 1), // SE
+        debugPrint(self)
+        return y.isMultiple(of: 2) ? [
+            offset(x: -1, y: -1),
+            offset(x: -1),
+            offset(x: -1, y: 1),
+            offset(y: -1),
+            offset(y: 1),
+            offset(x: 1),
+        ] : [
+            offset(x: -1),
+            offset(y: -1),
+            offset(y: 1),
+            offset(x: 1, y: -1),
+            offset(x: 1),
+            offset(x: 1, y: 1),
         ]
     }
 }
@@ -34,4 +45,8 @@ extension TilePosition: CustomDebugStringConvertible {
     public var debugDescription: String {
         "(\(x), \(y))"
     }
+}
+
+extension TilePosition {
+    public var cgPoint: CGPoint { .init(x: x, y: y) }
 }

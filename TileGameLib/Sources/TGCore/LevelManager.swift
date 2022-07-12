@@ -7,6 +7,13 @@ public protocol Level {
     func isGameOver() -> Bool
 }
 
+
+public extension Level {
+    static func `default`(board: Board) -> Level {
+        LevelManager(board: board)
+    }
+}
+
 final class LevelManager: Level {
     private(set) var board: Board
     private(set) var playerPosition: TilePosition?
@@ -16,6 +23,8 @@ final class LevelManager: Level {
     }
 
     func removeTile(atPosition position: TilePosition) {
+        guard playerPosition != position
+        else { return }
         board[position] = .empty
     }
     
@@ -27,16 +36,20 @@ final class LevelManager: Level {
     }
     
     func isGameOver() -> Bool {
-        getPlayerSurroundings()
-            .map { board[$0] }
-            .contains(.exit)
+        if let playerPosition = playerPosition, board[playerPosition] == .exit {
+            return true
+        }
+        let surroundings = getPlayerSurroundings().map { board[$0] }.filter { $0 == .exit }
+        return surroundings.count > 1
     }
     
     private func getPlayerSurroundings() -> [TilePosition] {
         guard let playerPosition = playerPosition
         else { return [] }
 
-        return [playerPosition] + playerPosition.surroundings
+        let s = [playerPosition] + playerPosition.surroundings
             .filter(board.contains)
+        debugPrint(s)
+        return s
     }
 }
