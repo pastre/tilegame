@@ -59,33 +59,6 @@ final class LevelManagerTests: XCTestCase {
         XCTAssertTrue(game.isGameOver())
     }
     
-    func test_game_over_when_exit_is_northwest() {
-        let game = largeGame
-        
-        game.movePlayer(toPosition: .init(x: 1, y: 1))
-        XCTAssertTrue(game.isGameOver())
-    }
-    
-    func test_game_over_when_exit_is_northeast() {
-        let game = largeGame
-        
-        game.movePlayer(toPosition: .init(x: 4, y: 1))
-        XCTAssertTrue(game.isGameOver())
-    }
-    
-    func test_game_over_when_exit_is_southeast() {
-        let game = largeGame
-        
-        game.movePlayer(toPosition: .init(x: 4, y: 4))
-        XCTAssertTrue(game.isGameOver())
-    }
-    
-    func test_game_over_when_exit_is_southwest() {
-        let game = largeGame
-        
-        game.movePlayer(toPosition: .init(x: 1, y: 4))
-        XCTAssertTrue(game.isGameOver())
-    }
     
     func test_move_player_checks_if_coordinate_is_ok() {
         let game = largeGame

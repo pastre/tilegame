@@ -17,6 +17,11 @@ final class LevelSpy: Level {
 }
 
 final class LevelStub: Level {
+    var boardToUse: Board?
+    
+    var board: Board {
+        boardToUse ?? .empty
+    }
     var isGameOverToUse: Bool = true
     func isGameOver() -> Bool {
         isGameOverToUse
