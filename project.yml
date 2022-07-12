@@ -10,5 +10,18 @@ targets:
     platform: iOS
     deploymentTarget: "14.0"
     sources: [iOS]
+    info:
+      path: iOS/Info.plist
+      properties:
+        CFBundleDisplayName: "TileGame TODOCHANGETHIS" 
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundleVersion: "1.0"
+        UILaunchScreen:
+          UILaunchScreen:
+          
     dependencies:
       - package: TileGameLib
+        product: TGCore
+      - package: TileGameLib
+        product: TGKit

@@ -1,16 +1,21 @@
 import SpriteKit
 import TGCore
 
+
 final class BoardNode: SKNode {
     private var currentNodes: [[SKShapeNode]] = []
     
     func draw(rows: [[Tile]], boardSize: BoardSize) {
+        guard let totalSceneWidth = scene?.frame.width
+        else { return }
+        let hexagonRadius: CGFloat = totalSceneWidth / CGFloat(boardSize.width)  / 2
+        
         currentNodes = rows.enumerated()
             .map { (j, row) in
                 row
                     .enumerated()
                     .map { (i, tile) -> SKShapeNode in
-                        let node = SKShapeNode(hexagonOfRadius: 10)
+                        let node = SKShapeNode(hexagonOfRadius: hexagonRadius)
                         switch tile {
                         case .empty:
                             node.fillColor = .clear
@@ -20,19 +25,28 @@ final class BoardNode: SKNode {
                             node.fillColor = .blue
                         }
                         node.fillColor = .red
+                        
+                        node.strokeColor = .random
+                        node.lineWidth = 2
+                        
                         return node
                 }
             }
         
         for j in 0..<boardSize.height {
+            let row = SKNode()
+            var screenPosition: CGPoint!
             for i in 0..<boardSize.width {
                 let boardPosition = CGPoint(x: i, y: j)
-                let screenPosition = convert(boardPosition, fromBoardWithHexagonRadius: 12)
+                screenPosition = convert(boardPosition, fromBoardWithHexagonRadius: hexagonRadius)
                 let node = currentNodes[j][i]
-                node.position = screenPosition
-                addChild(node)
+                node.position.x = screenPosition.x
+                row.addChild(node)
                 debugPrint(boardPosition, screenPosition)
             }
+            
+            addChild(row)
+            row.position.y = screenPosition.y + 10
         }
         
     }
@@ -45,17 +59,15 @@ final class BoardNode: SKNode {
         _ point: CGPoint,
         fromBoardWithHexagonRadius radius: CGFloat
     ) -> CGPoint {
-        guard let scene = scene else { return .zero }
-        let convert: (CGFloat) -> CGFloat = { i in
-            let xSpacing: CGFloat = 0
-            let spacing = i * xSpacing
-            let radiiCount = radius + i * 2 * radius
-            return radiiCount + spacing
-        }
-        print(convert(point.y))
+        let height = sqrt(3) * radius / 2
+        let xSpacing: CGFloat = 0
+        let ySpacing: CGFloat = 0
+        
+        let x = xSpacing + radius + point.x * 2 * radius
+        let y = height + point.y * 2 * height + point.y * ySpacing
         return .init(
-            x: convert(point.x),
-            y: convert(point.y)
+            x: x,
+            y: y
         )
     }
 }
@@ -74,7 +86,6 @@ final class BoardNode: SKNode {
     }
     
     public func render(level: Level) {
-        
         boardNode.draw(rows: level.board.rows, boardSize: level.board.size)
         if let playerPosition = level.playerPosition {
             boardNode.draw(playerAt: playerPosition)
@@ -107,5 +118,16 @@ extension CGPath {
         path.addLines(between: points)
         path.closeSubpath()
         return path.copy()!
+    }
+}
+
+extension UIColor {
+    static var random: UIColor {
+        UIColor(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: .random(in: 0...1),
+            alpha: 1
+        )
     }
 }

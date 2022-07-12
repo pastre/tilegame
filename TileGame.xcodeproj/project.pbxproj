@@ -3,18 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25E9931BF4D67862D3667066 /* TileGameLib in Frameworks */ = {isa = PBXBuildFile; productRef = C4371D426B7EA585222C17B6 /* TileGameLib */; };
+		25E9931BF4D67862D3667066 /* TGCore in Frameworks */ = {isa = PBXBuildFile; productRef = C99FE84920F163B448369558 /* TGCore */; };
 		A005982D3A05A2A506697BEF /* TileGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058951E40B080754F6804DE3 /* TileGameApp.swift */; };
+		B8D79E9852E3187E317AF6A7 /* TGKit in Frameworks */ = {isa = PBXBuildFile; productRef = C06D0E9DBCC8157065539D78 /* TGKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		058951E40B080754F6804DE3 /* TileGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileGameApp.swift; sourceTree = "<group>"; };
-		1226C22EA291BB8EFD1D62B6 /* TileGameLib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TileGameLib; path = TileGameLib; sourceTree = SOURCE_ROOT; };
+		1226C22EA291BB8EFD1D62B6 /* TileGameLib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TileGameLib; sourceTree = SOURCE_ROOT; };
+		D40B81D7E513D6FF612D57F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7B957CDFD9959F3D4004902 /* TileGame - iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "TileGame - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EDA18C287D8AAD005DFFF3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,7 +25,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E9931BF4D67862D3667066 /* TileGameLib in Frameworks */,
+				25E9931BF4D67862D3667066 /* TGCore in Frameworks */,
+				B8D79E9852E3187E317AF6A7 /* TGKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +53,9 @@
 		C359C71C5871A5C48CD4C8DF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D40B81D7E513D6FF612D57F1 /* Info.plist */,
 				058951E40B080754F6804DE3 /* TileGameApp.swift */,
+				D7EDA18C287D8AAD005DFFF3 /* LaunchScreen.storyboard */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -78,7 +84,8 @@
 			);
 			name = "TileGame - iOS";
 			packageProductDependencies = (
-				C4371D426B7EA585222C17B6 /* TileGameLib */,
+				C99FE84920F163B448369558 /* TGCore */,
+				C06D0E9DBCC8157065539D78 /* TGKit */,
 			);
 			productName = "TileGame - iOS";
 			productReference = D7B957CDFD9959F3D4004902 /* TileGame - iOS.app */;
@@ -91,8 +98,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 7219E3A074B85787E43594AD /* Build configuration list for PBXProject "TileGame" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -128,7 +133,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -261,7 +267,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,9 +303,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C4371D426B7EA585222C17B6 /* TileGameLib */ = {
+		C06D0E9DBCC8157065539D78 /* TGKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TileGameLib;
+			productName = TGKit;
+		};
+		C99FE84920F163B448369558 /* TGCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TGCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
