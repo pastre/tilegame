@@ -1,6 +1,7 @@
 public enum GameState {
     case notStarted
     case running
+    case won
     case over
 }
 
@@ -58,6 +59,7 @@ public final class GameLoop {
         }).randomElement() {
             level?.movePlayer(toPosition: playerStartPosition)
         }
+        currentGameState = .running
     }
     
     public func removeTile(atPosition position: TilePosition) {
@@ -75,7 +77,11 @@ public final class GameLoop {
     
     private func movePlayer(onLevel level: Level) {
         guard let nextMove = exitFinder.find(level)
-        else { return }
+        else {
+            currentGameState = .won
+            levelsPassed += 1
+            return
+        }
         level.movePlayer(toPosition: nextMove)
         delegate?.playerDidMove(level, toPosition: nextMove)
     }

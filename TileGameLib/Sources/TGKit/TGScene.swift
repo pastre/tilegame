@@ -156,6 +156,8 @@ extension GameNode: GameLoopDelegate {
         #warning("TODO")
         case .over:
             #warning("TODO")
+        case .won:
+            gameLoop.createNewLevel()
         }
     }
     
