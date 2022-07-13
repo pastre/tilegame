@@ -23,16 +23,17 @@ extension ExitFinder {
             }
         )
         
-        return exits
-            .map {
+        let paths = exits.map {
                 aStar.path(
                     start: $0,
                     target: level.playerPosition!
                 )
-            }
-            .min(
-                by: { $0.count < $1.count }
-            )?
+        }
+            .filter { !$0.isEmpty }
+        
+        return paths.min(by: {
+                $0.count < $1.count
+            })?
             .dropLast()
             .last
     }

@@ -15,7 +15,7 @@ public final class GameLoop {
     private let exitFinder: ExitFinder
     
     public private(set) var level: Level?
-    private var levelsPassed = 0
+    public private(set) var levelsPassed = 0
     private var currentGameState: GameState = .notStarted {
         didSet {
             delegate?.gameStateDidChange(toNewState: currentGameState)
@@ -78,8 +78,8 @@ public final class GameLoop {
     private func movePlayer(onLevel level: Level) {
         guard let nextMove = exitFinder.find(level)
         else {
-            currentGameState = .won
             levelsPassed += 1
+            currentGameState = .won
             return
         }
         level.movePlayer(toPosition: nextMove)

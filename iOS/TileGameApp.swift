@@ -10,7 +10,7 @@ final class TileGameScene: SKScene {
         rows[0][4] = .exit
         return .init(rows: rows, size: 8)
     }
-    private lazy var game = GameLoop(levelFactory: .debug(board: board))
+    private lazy var game = GameLoop()
     private lazy var node = GameNode(gameLoop: game)
     
     override init(size: CGSize) {
