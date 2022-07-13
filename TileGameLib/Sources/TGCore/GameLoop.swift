@@ -30,7 +30,7 @@ public final class GameLoop {
     public convenience init(levelFactory: LevelMaker? = nil) {
         self.init(
             levelFactory: levelFactory ?? .default,
-            exitFinder: .usingDjikstra
+            exitFinder: .usingAStar
         )
     }
     

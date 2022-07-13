@@ -22,8 +22,7 @@ extension TilePosition {
 
 extension TilePosition {
     var surroundings: [TilePosition] {
-        debugPrint(self)
-        return y.isMultiple(of: 2) ? [
+        y.isMultiple(of: 2) ? [
             offset(x: -1, y: -1),
             offset(x: -1),
             offset(x: -1, y: 1),

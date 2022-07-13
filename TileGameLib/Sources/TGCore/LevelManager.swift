@@ -49,7 +49,6 @@ final class LevelManager: Level {
 
         let s = [playerPosition] + playerPosition.surroundings
             .filter(board.contains)
-        debugPrint(s)
         return s
     }
 }
