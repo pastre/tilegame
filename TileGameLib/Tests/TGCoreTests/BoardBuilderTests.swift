@@ -126,6 +126,16 @@ final class BoardBuilderTest: XCTestCase {
             .board()
         XCTAssertEqual(board.count(tile: .empty), board.count(tile: .floor))
     }
+    
+    func test_board_area_calculation() {
+        let board = BoardBuilder(size: 4)
+            .fill(withTile: .floor)
+            .withExitBorder()
+            .removing(.floor, percent: 0.5)
+            .board()
+        
+        XCTAssertEqual(16, board.area)
+    }
 }
 
 /*

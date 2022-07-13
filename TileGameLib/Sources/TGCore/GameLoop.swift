@@ -46,19 +46,18 @@ public final class GameLoop {
     public func start() {
         levelsPassed = 0
         createNewLevel()
-        currentGameState = .running
     }
     
     public func createNewLevel() {
-        level = levelFactory.make(levelsPassed)
-        if let playerStartPosition = level?.board.rows.enumerated().flatMap({ (j, row) in
-            row.enumerated().compactMap { (i, tile) -> TilePosition? in
-                if tile != .floor { return nil }
-                return TilePosition(x: i, y: j)
-            }
+        let level = levelFactory.make(levelsPassed)
+        if let playerStartPosition = level.board.rows.enumerated().flatMap({ (j, row) in
+            row.enumerated()
+                .filter { _, tile in tile == .floor }
+                .map { (i, _) in TilePosition(x: i, y: j) }
         }).randomElement() {
-            level?.movePlayer(toPosition: playerStartPosition)
+            level.movePlayer(toPosition: playerStartPosition)
         }
+        self.level = level
         currentGameState = .running
     }
     

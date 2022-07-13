@@ -7,13 +7,6 @@ public protocol Level {
     func isGameOver() -> Bool
 }
 
-
-public extension Level {
-    static func `default`(board: Board) -> Level {
-        LevelManager(board: board)
-    }
-}
-
 final class LevelManager: Level {
     private(set) var board: Board
     private(set) var playerPosition: TilePosition?

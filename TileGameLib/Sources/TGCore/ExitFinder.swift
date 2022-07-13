@@ -4,7 +4,10 @@ struct ExitFinder {
 
 extension ExitFinder {
     static let usingAStar: Self = .init { level in
+        guard let playerPosition = level.playerPosition
+        else { return nil }
         let board = level.board
+        
         let exits = board.rows
             .enumerated()
             .flatMap { (j, row) in
@@ -23,15 +26,10 @@ extension ExitFinder {
             }
         )
         
-        let paths = exits.map {
-                aStar.path(
-                    start: $0,
-                    target: level.playerPosition!
-                )
-        }
+        return exits
+            .map { aStar.path(start: $0, target: playerPosition) }
             .filter { !$0.isEmpty }
-        
-        return paths.min(by: {
+            .min(by: {
                 $0.count < $1.count
             })?
             .dropLast()
