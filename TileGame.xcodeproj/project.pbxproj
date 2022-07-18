@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCE7A134D81FE4DDFFD929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3760328EE69627CAC70BC0A /* Assets.xcassets */; };
 		25E9931BF4D67862D3667066 /* TGCore in Frameworks */ = {isa = PBXBuildFile; productRef = C99FE84920F163B448369558 /* TGCore */; };
 		A005982D3A05A2A506697BEF /* TileGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058951E40B080754F6804DE3 /* TileGameApp.swift */; };
 		B8D79E9852E3187E317AF6A7 /* TGKit in Frameworks */ = {isa = PBXBuildFile; productRef = C06D0E9DBCC8157065539D78 /* TGKit */; };
+		D7F4FBB328845FE60046634D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4FBB228845FE60046634D /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		058951E40B080754F6804DE3 /* TileGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileGameApp.swift; sourceTree = "<group>"; };
 		1226C22EA291BB8EFD1D62B6 /* TileGameLib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TileGameLib; sourceTree = SOURCE_ROOT; };
+		D3760328EE69627CAC70BC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D40B81D7E513D6FF612D57F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D7B957CDFD9959F3D4004902 /* TileGame - iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "TileGame - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7EDA18C287D8AAD005DFFF3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7B957CDFD9959F3D4004902 /* TileGame - iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TileGame - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F4FBB228845FE60046634D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +56,10 @@
 		C359C71C5871A5C48CD4C8DF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3760328EE69627CAC70BC0A /* Assets.xcassets */,
 				D40B81D7E513D6FF612D57F1 /* Info.plist */,
 				058951E40B080754F6804DE3 /* TileGameApp.swift */,
-				D7EDA18C287D8AAD005DFFF3 /* LaunchScreen.storyboard */,
+				D7F4FBB228845FE60046634D /* ContentView.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -76,6 +80,7 @@
 			buildConfigurationList = AA208C6895FC27F54A5BC0E7 /* Build configuration list for PBXNativeTarget "TileGame - iOS" */;
 			buildPhases = (
 				A3D4ADF7FA57D67BC058E66D /* Sources */,
+				7A38093E4412D5EF2A069297 /* Resources */,
 				4FCBDC542AE7EBCBFCAC4A5B /* Frameworks */,
 			);
 			buildRules = (
@@ -116,11 +121,23 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		7A38093E4412D5EF2A069297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CCE7A134D81FE4DDFFD929C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A3D4ADF7FA57D67BC058E66D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F4FBB328845FE60046634D /* ContentView.swift in Sources */,
 				A005982D3A05A2A506697BEF /* TileGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +150,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QM43B7QRF9;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -267,6 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QM43B7QRF9;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

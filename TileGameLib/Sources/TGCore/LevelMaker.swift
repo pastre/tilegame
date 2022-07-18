@@ -7,8 +7,11 @@ public struct LevelMaker {
 }
 
 extension LevelMaker {
+    
+    public static let defaultBoardSize = 8
+    
     static let `default`: Self = .init { level in
-        let board = BoardBuilder(size: 8)
+        let board = BoardBuilder(size: .init(integerLiteral: defaultBoardSize))
             .fill(withTile: .floor)
             .withExitBorder()
             .removing(.exit, percent: 0.4)

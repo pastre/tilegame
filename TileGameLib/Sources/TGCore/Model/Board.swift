@@ -54,3 +54,39 @@ extension Board {
         return row.indices.contains(position.x)
     }
 }
+
+public extension Array where Element == [Tile] {
+    func iterate(_ block: (TilePosition, Tile) -> Void) {
+        for (j, rows) in enumerated() {
+            for (i, tile) in rows.enumerated() {
+                block(.init(x: i, y: j), tile)
+            }
+        }
+    }
+    
+    func map<T>(_ block: (TilePosition, Tile) -> T) -> [[T]] {
+        enumerated().map { j, rows in
+            rows.enumerated().map { i, tile in
+                block(.init(x: i, y: j), tile)
+            }
+        }
+    }
+}
+
+public extension Collection where Element: Collection {
+    func linearMap<T>(_ block: (Self.Element.Element) -> T) -> [[T]] {
+        enumerated().map { j, rows in
+            rows.enumerated().map { i, tile in
+                block(tile)
+            }
+        }
+    }
+    
+    func linearForEach(_ block: (Self.Element.Element) -> Void) -> Void {
+        forEach { rows in
+            rows.forEach { element in
+                block(element)
+            }
+        }
+    }
+}

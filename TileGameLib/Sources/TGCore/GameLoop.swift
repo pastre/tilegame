@@ -14,7 +14,7 @@ public final class GameLoop {
     private let levelFactory: LevelMaker
     private let exitFinder: ExitFinder
     
-    public private(set) var level: Level?
+    public private(set) var level: Level
     public private(set) var levelsPassed = 0
     private var currentGameState: GameState = .notStarted {
         didSet {
@@ -41,6 +41,7 @@ public final class GameLoop {
     ) {
         self.levelFactory = levelFactory
         self.exitFinder = exitFinder
+        self.level = levelFactory.make(levelsPassed)
     }
     
     public func start() {
@@ -62,10 +63,6 @@ public final class GameLoop {
     }
     
     public func removeTile(atPosition position: TilePosition) {
-        guard let level = level else {
-            return
-        }
-
         level.removeTile(atPosition: position)
         if level.isGameOver() {
             currentGameState = .over

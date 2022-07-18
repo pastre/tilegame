@@ -17,3 +17,21 @@ public struct BoardSize: ExpressibleByIntegerLiteral, Equatable {
 extension BoardSize {
     static var zero: Self { .init(width: 0, height: 0) }
 }
+
+public extension BoardSize {
+    func iterate(_ block: (TilePosition) -> Void) {
+        for j in 0..<height {
+            for i in 0..<width {
+                block(.init(x: i, y: j))
+            }
+        }
+    }
+    
+    func iterate(_ block: (Int, Int) -> Void) {
+        for j in 0..<height {
+            for i in 0..<width {
+                block(i, j)
+            }
+        }
+    }
+}

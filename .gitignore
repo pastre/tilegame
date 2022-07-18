@@ -1,6 +1,3 @@
 .DS_Store
-.TileGame/TileGame.xcodeproj/xcuserdata
 
-TileGame/TileGame.xcodeproj/xcuserdata/pastre.xcuserdatad/xcdebugger/
-
-TileGame/TileGame.xcodeproj/project.xcworkspace/xcuserdata/pastre.xcuserdatad/
+*.xcodeproj/

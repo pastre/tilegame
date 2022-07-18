@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "TileGameLib",
+    platforms: [
+        .iOS(.v14),
+        .macOS(.v12),
+    ],
     products: [
         .library(
             name: "TGCore",
