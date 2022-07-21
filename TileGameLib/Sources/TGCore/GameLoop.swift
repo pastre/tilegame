@@ -1,16 +1,17 @@
-public enum GameState {
-    case notStarted
-    case running
-    case won
-    case over
-}
-
 public protocol GameLoopDelegate: AnyObject {
     func gameStateDidChange(toNewState gameState: GameState)
     func playerDidMove(_ level: Level, toPosition position: TilePosition)
 }
 
-public final class GameLoop {
+public protocol GameLoopProtocol: AnyObject {
+    var delegate: GameLoopDelegate? { get set }
+    var level: Level { get }
+    
+    func start()
+    func removeTile(atPosition: TilePosition)
+}
+
+public final class GameLoop: GameLoopProtocol {
     private let levelFactory: LevelMaker
     private let exitFinder: ExitFinder
     
@@ -79,6 +80,8 @@ public final class GameLoop {
             return
         }
         level.movePlayer(toPosition: nextMove)
-        delegate?.playerDidMove(level, toPosition: nextMove)
+        delegate?.playerDidMove(
+            level,
+            toPosition: nextMove)
     }
 }

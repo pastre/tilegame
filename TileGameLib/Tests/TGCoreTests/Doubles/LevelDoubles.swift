@@ -26,6 +26,11 @@ final class LevelStub: Level {
     func isGameOver() -> Bool {
         isGameOverToUse
     }
+    
+    private(set) var movePlayerPositionPassed: TilePosition?
+    func movePlayer(toPosition position: TilePosition) {
+        movePlayerPositionPassed = position
+    }
 }
 
 extension Level {

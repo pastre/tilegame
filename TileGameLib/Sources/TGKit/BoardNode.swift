@@ -25,15 +25,14 @@ final class BoardNode: SKNode {
     }
     
     func draw(rows: [[Tile]], boardSize: BoardSize) {
-        guard let totalSceneWidth = scene?.frame.width
-        else { return }
-        
         currentNodes.linearForEach { $0.removeFromParent() }
         currentNodes = []
         
         let hexagonRadius = coordinateConverter.radius
         
-        currentNodes = rows.linearMap { makeNode(forTile: $0, hexagonRadius )}
+        currentNodes = rows.linearMap {
+            makeNode(forTile: $0, hexagonRadius)
+        }
         
         boardSize.iterate { i, j in
             let node = currentNodes[j][i]
@@ -48,13 +47,11 @@ final class BoardNode: SKNode {
         if playerNode.parent == nil {
             addChild(playerNode)
         }
-        guard let totalSceneWidth = scene?.frame.width
-        else { return }
         let position = coordinateConverter.convert(position.cgPoint)
         playerNode.position = position
     }
     
-    func tile(atPosition position: CGPoint, boardSize: BoardSize) -> TilePosition? {
+    func tile(atPosition position: CGPoint) -> TilePosition? {
         for j in 0..<currentNodes.count {
             for i in 0..<currentNodes[j].count {
                 let node = currentNodes[j][i]

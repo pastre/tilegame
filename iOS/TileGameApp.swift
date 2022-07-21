@@ -9,10 +9,3 @@ struct TileGameApp: App {
     }
     
 }
-
-extension CGSize {
-    func square() -> CGSize {
-        let sideLenght = min(height, width)
-        return .init(width: sideLenght, height: sideLenght)
-    }
-}

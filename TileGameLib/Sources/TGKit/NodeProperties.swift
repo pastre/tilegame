@@ -1,5 +1,5 @@
 #if os(OSX)
-
+import AppKit
 typealias Color = NSColor
 
 #else

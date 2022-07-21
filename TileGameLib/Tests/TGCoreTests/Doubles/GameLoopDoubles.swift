@@ -1,7 +1,12 @@
 @testable import TGCore
 
 final class GameLoopSpy: GameLoopDelegate {
+    
+    private(set) var playerDidMoveCallCount = 0
+    private(set) var playerDidMovePositionPassed: TilePosition?
     func playerDidMove(_ level: Level, toPosition position: TilePosition) {
+        playerDidMoveCallCount += 1
+        playerDidMovePositionPassed = position
         // TODO
     }
     
@@ -10,13 +15,6 @@ final class GameLoopSpy: GameLoopDelegate {
     func gameStateDidChange(toNewState gameState: GameState) {
         gameStateDidChangeCallCount += 1
         gameStateDidChangeNewStatePassed = gameState
-    }
-    
-    private(set) var playerDidMoveCallCount = 0
-    private(set) var playerDidMovePositionPassed: TilePosition?
-    func playerDidMove(toPosition position: TilePosition) {
-        playerDidMoveCallCount += 1
-        playerDidMovePositionPassed = position
     }
 }
 

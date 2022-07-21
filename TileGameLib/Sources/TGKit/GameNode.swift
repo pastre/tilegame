@@ -1,18 +1,19 @@
 import SpriteKit
 import TGCore
 
-protocol GameUIDelegate {
+public protocol GameUIDelegate {
     func showStartScreen()
     func showGame()
     func showGameOverScreen()
 }
 
+
 public final class GameNode: SKNode {
     private let boardNode: BoardNode
-    private let gameLoop: GameLoop
+    private let gameLoop: GameLoopProtocol
 
     public init(
-        gameLoop: GameLoop,
+        gameLoop: GameLoopProtocol,
         coordinateConverter: CoordinateConverter
     ) {
         self.gameLoop = gameLoop
@@ -31,18 +32,12 @@ public final class GameNode: SKNode {
     }
     
     public func onTouch(atPosition position: CGPoint) {
-        guard let tilePosition = boardNode.tile(
-                atPosition: position,
-                boardSize: gameLoop.level.board.size
-              )
+        guard let tilePosition = boardNode.tile(atPosition: position)
         else { return }
         gameLoop.removeTile(atPosition: tilePosition)
     }
     
-    public func render(level: Level?) {
-        guard let level = level
-        else { return }
-
+    public func render(level: Level) {
         boardNode.draw(
             rows: level.board.rows,
             boardSize: level.board.size
@@ -67,9 +62,9 @@ extension GameNode: GameLoopDelegate {
         case .running:
         #warning("TODO")
         case .over:
-            gameLoop.start()
+#warning("TODO")
         case .won:
-            gameLoop.createNewLevel()
+#warning("TODO")
         }
     }
     

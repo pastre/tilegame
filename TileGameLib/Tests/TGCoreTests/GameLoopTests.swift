@@ -2,7 +2,7 @@ import XCTest
 
 @testable import TGCore
 
-final class GameManagerTests: XCTestCase {
+final class GameLoopTests: XCTestCase {
     func test_start_begins_with_level_zero_and_sets_current_level() throws {
         let sut = GameLoop(levelFactory: {
             XCTAssertEqual(0, $0)
@@ -80,11 +80,10 @@ final class GameManagerTests: XCTestCase {
     }
     
     func test_whenTileIsRemovedAndGameIsNotOverItShouldMovePlayer() throws {
-        throw XCTSkip(" TODO" )
-        let expectedPosition = TilePosition(x: 0, y: 0)
+        let expectedPosition = TilePosition(x: 0, y: 1)
         let spy = GameLoopSpy()
         let stub = LevelStub()
-        stub.boardToUse = BoardBuilder(size: 2)
+        stub.boardToUse = BoardBuilder(size: 3)
             .fill(withTile: .floor)
             .board()
         let game = GameLoop(
@@ -101,14 +100,36 @@ final class GameManagerTests: XCTestCase {
         
         XCTAssertEqual(2, spy.gameStateDidChangeCallCount)
         XCTAssertEqual(spy.gameStateDidChangeNewStatePassed, .running)
-        XCTAssertNotNil(game.level?.playerPosition)
+        XCTAssertEqual(expectedPosition, stub.movePlayerPositionPassed)
         XCTAssertEqual(1, spy.playerDidMoveCallCount)
         XCTAssertEqual(expectedPosition, spy.playerDidMovePositionPassed)
+    }
+    
+    func test_passesLevelWhenPlayerHasNoMoves() {
+        let spy = GameLoopSpy()
+        let stub = LevelStub()
+        stub.boardToUse = BoardBuilder(size: 3)
+            .fill(withTile: .floor)
+            .board()
+        let game = GameLoop(
+            levelFactory: .stub(stub),
+            exitFinder: .stub(nil)
+        )
+        
+        stub.isGameOverToUse = false
+        game.delegate = spy
+        
+        game.start()
+        game.removeTile(atPosition: .zero)
+        
+        XCTAssertEqual(3, spy.gameStateDidChangeCallCount)
+        XCTAssertEqual(spy.gameStateDidChangeNewStatePassed, .won)
+        XCTAssertEqual(1, game.levelsPassed)
     }
 }
 
 extension ExitFinder {
-    static func stub(_ expectedValue: TilePosition) -> Self {
+    static func stub(_ expectedValue: TilePosition?) -> Self {
         .init(find: { _ in expectedValue })
     }
 }
@@ -116,5 +137,9 @@ extension ExitFinder {
 extension LevelMaker {
     static func stub(_ expectedValue: Level) -> Self {
         .init(make: { _ in expectedValue })
+    }
+    
+    static var dummy: Self = .init { _ in
+        DummyLevel()
     }
 }
