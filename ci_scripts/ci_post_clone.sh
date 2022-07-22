@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd ..
+cd "$(git rev-parse --show-toplevel)"
 xcodegen

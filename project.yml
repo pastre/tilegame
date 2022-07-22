@@ -13,7 +13,7 @@ targets:
     info:
       path: iOS/Info.plist
       properties:
-        CFBundleDisplayName: "TileGame TODOCHANGETHIS" 
+        CFBundleDisplayName: Hex Escape
         CFBundleExecutable: $(EXECUTABLE_NAME)
         CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
         CFBundleVersion: "1.0"
