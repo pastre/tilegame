@@ -23,7 +23,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UILaunchScreen</key>
-		<dict/>
+		<string></string>
 	</dict>
 </dict>
 </plist>
